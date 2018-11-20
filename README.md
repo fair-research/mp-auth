@@ -14,8 +14,8 @@ stack up with other authentication classes to authenticate a bearer token agains
 Identity Providers. The Multiprovider Authentication middleware fills up the gap. It supports all
 Identity Providers that issue JWT tokens and [Globus][globus] that issues opaque access tokens. Support
 for other Identity Providers can easily be added by creating a new backend in `mp_auth/backends`.
-Each backend can be used separately as an Django REST Framework authentication class, or can be a part of
-list of authentication class that Django REST Framework will go through to authenticate an HTTP request.
+Each backend can be used individually as an Django REST Framework authentication class, or can be an element of
+a list of authentication classes that Django REST Framework will go through to authenticate an HTTP request.
 `mp_auth.backend.mp.MultiproviderAuthentication` is a special authentication class that calls all
 authentication classes configured in `settings.py`.
 
@@ -23,7 +23,7 @@ authentication classes configured in `settings.py`.
 
 Install the Multiprovider Authentication middleware for Django REST Framework (Python 3 is required)
 ```shell
-pip install git+git://github.com/lukaszlacinski/mp_auth.git
+pip install git+git://github.com/fair-research/mp-auth.git
 ```
 and in `settings.py` set the following:
 ```python
